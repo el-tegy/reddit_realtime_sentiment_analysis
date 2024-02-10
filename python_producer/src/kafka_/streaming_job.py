@@ -1,5 +1,5 @@
-from client.client import get_reddit_client()
-from kafka.producer import get_kafka_producer()
+from client.client import get_reddit_client
+from kafka_.producer import get_kafka_producer
 from praw.models import Comment
 def streaming(subreddit_name):
     reddit = get_reddit_client()
@@ -20,6 +20,7 @@ def streaming(subreddit_name):
                 "timestamp": comment.created_utc,
                 "permalink": comment.permalink
             }
+            print(f'subreddit: {subreddit_name}, comment: {comment_json}')
             producer.send('subreddits_comments', value=comment_json)
             print(f'subreddit: {subreddit_name}, comment: {comment_json}')
         except Exception as e:

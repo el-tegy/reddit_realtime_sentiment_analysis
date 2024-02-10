@@ -1,8 +1,8 @@
 import threading
 
-from kafka.streaming_job import streaming
+from kafka_.streaming_job import streaming
 
-subreddits = ['india', 'usa', 'unitedkingdom', 'australia', 'russia', 'China', 'unitedkingdom', 'japan', 'france',
+subreddits = ['india', 'usa', 'unitedkingdom', 'australia', 'russia', 'China', 'japan', 'france',
               'germany', 'italy', 'brazil', 'canada']
 threads = []
 

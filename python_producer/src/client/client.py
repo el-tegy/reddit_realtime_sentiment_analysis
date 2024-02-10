@@ -1,4 +1,4 @@
-
+import os
 from praw import Reddit
 from utils import config
 
